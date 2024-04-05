@@ -1,0 +1,9 @@
+*.cfg
+!default.cfg
+init.cfg
+*.json
+!sample_report.json
+*.pdf
+!sample_report.pdf
+__pycache__/
+ignore.py

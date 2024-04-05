@@ -1,0 +1,99 @@
+{
+    "report_header": {
+        "report_name": "a",
+        "asdf": "asdfs",
+        "date_and_time": "11/11/2023 16:02:57",
+        "tests_passed": "1/2",
+        "passing_threshold": "3",
+        "result": false
+    },
+    "test_sequence": [
+        {
+            "test_name": "example1",
+            "test_passed": true,
+            "results": [
+                {
+                    "step_name": "find_peaks",
+                    "peak_start": [],
+                    "peak_center": [],
+                    "peak_end": []
+                },
+                {
+                    "step_name": "min_max_signal",
+                    "status": true,
+                    "measurement": "N/A",
+                    "units": "N/A",
+                    "low_limit": 0,
+                    "high_limit": 10
+                },
+                {
+                    "step_name": "average_signal",
+                    "status": true,
+                    "measurement": 2
+                },
+                {
+                    "step_name": "rise_time_peak",
+                    "status": true,
+                    "measurement": [
+                        1.2,
+                        3.9,
+                        4.7,
+                        8.2
+                    ],
+                    "units": "N/A",
+                    "low_limit": "N/A",
+                    "high_limit": "N/A"
+                },
+                {
+                    "step_name": "fall_time_peak",
+                    "status": true,
+                    "measurement": [
+                        1.2,
+                        3.9,
+                        4.7,
+                        8.2
+                    ],
+                    "units": "N/A",
+                    "low_limit": "N/A",
+                    "high_limit": "N/A"
+                },
+                {
+                    "step_name": "avg_rise_time",
+                    "status": true,
+                    "measurement": 4.5,
+                    "units": "N/A",
+                    "low_limit": "N/A",
+                    "high_limit": "N/A"
+                },
+                {
+                    "step_name": "avg_fall_time",
+                    "status": true,
+                    "measurement": 4.5,
+                    "units": "N/A",
+                    "low_limit": "N/A",
+                    "high_limit": "N/A"
+                }
+            ]
+        },
+        {
+            "test_name": "example2",
+            "test_passed": false,
+            "results": [
+                {
+                    "step_name": "find_peaks",
+                    "peak_start": [],
+                    "peak_center": [],
+                    "peak_end": []
+                },
+                {
+                    "step_name": "avg_rise_time",
+                    "status": false,
+                    "measurement": 4.5,
+                    "units": "N/A",
+                    "low_limit": "N/A",
+                    "high_limit": "N/A"
+                }
+            ]
+        }
+    ]
+}
