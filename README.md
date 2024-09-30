@@ -36,7 +36,7 @@ In the Report Tab, the user can generate the reports and set the passing thresho
 
 git clone https://github.com/Ulidtsoa01/Sandia-User-Configurable-Tester.git
 
-cd Jimaku-Subtitle-Updater
+cd Sandia-User-Configurable-Tester
 
 pip install -r requirements.txt
 
