@@ -1,4 +1,4 @@
-# README
+# Sandia User-Configurable Tester
 
 ## Description
 
