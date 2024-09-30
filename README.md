@@ -1,60 +1,60 @@
 # README
 
-## Introduction
+## Description
 
-Our team created a software solution to control a reconfigurable electronics product tester. This tester can control and automate data acquisition and test sequencing using DAQ sensors, while the GUI allows users to configure sensors and initiate testing. The user can generate a report after running a test suite of configured tests.
+Our team built a reconfigurable electronics product tester that can interface with DAQs from National Instruments. The tester can control and automate data acquisition and test sequencing when a DAQ is connected. Users can generate a report after running a test suite of configured tests. The main features are the following:
 
-## Requirements
+- Data collection: The nidaqmx API is used to interact with devices with NI-DAQmx drivers.
+- Test configuration: The sequence of tests to be run in a test suite, as well as their accompanying parameters, can be saved to and loaded from a file.
+- Signal processing: While running the tests, their results are graphically displayed along with useful metrics.
+- Report generation: The report includes the pass/fail status of each test and a breakdown of the steps in each test. The output formats are json and pdf. [sample_report.json](demo/sample_report.json) and [sample_report.pdf](demo/sample_report.pdf) are included as examples.
 
-This code has been run and tested on:
+## Overview
 
-- Python - 3.9.5
+### Test Runner
 
-## External Deps
+In the Test Runner Tab, the user can select the device and its input and output channels, create test configurations in the "Configuration" side tab, and select which configurations are used in the "Test Suite" side tab. The nav bar holds buttons for starting/stopping the tests and options for viewing the graph.
 
-- Git - Downloat latest version at https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+<img src="./demo/test runner.gif" width="auto" height="auto"/>
+<img src="./demo/test suite.jpg" width="auto" height="auto"/>
+
+### Analysis
+
+The Analysis Tab shows the graphs for the individual test steps of the tests that were run.
+
+<img src="./demo/analysis.gif" width="auto" height="auto"/>
+
+### Report Preview
+
+In the Report Tab, the user can generate the reports and set the passing threshold, which is the number of tests that need to pass for the entire test suite to pass.
+
+<img src="./demo/report preview.gif" width="auto" height="auto"/>
 
 ## Installation
 
-Download this code repository by using git:
+```
 
-`https://github.com/FA23-CSCE482-capstone-classroom/capstone-sandia-user-configurable-tester.git`
+git clone https://github.com/Ulidtsoa01/Sandia-User-Configurable-Tester.git
 
-## Execute Code
+cd Jimaku-Subtitle-Updater
 
-If using Windows, use the following commands to download these library dependencies.
+pip install -r requirements.txt
 
-1. `pip install PySide6`
-2. `pip install matplotlib`
-3. `pip install pandas`
-4. `pip install nidaqmx`
-5. `pip install keyboard`
-6. `pip install profig`
-7. `pip install reportlab`
+```
 
-Run the app
+## Steps for Running
 
-`python app.py`
+Run `python app.py`
 
-1. Plug in USB DAQ device and install DAQ drivers
-2. Run the application (from VS code or terminal)
-3. Configure your DAQ device and channels
-4. Configure your test steps
-5. Configure your test suite
-6. Click “Start Test Suite”
-7. After tests finish running, go to the Analysis Tab
-8. Click through steps for each test in the test suite
-9. Go to the Report Preview
-10. Fill out report fields (Custom Field allows you to populate a row in the report header with a custom title and text)
-11. Click report type you want to generate (JSON or PDF)
+To run a test suite, do the following:
 
-## Support
-
-The support of this app has been closed due to having zero customers.
-
-## Contributing
-
-[Contribution guidelines for this project](.github/CONTRIBUTING.md)
+1. Plug in an USB DAQ device and install its DAQ drivers.
+2. Select the DAQ device and input/output channels.
+3. Configure your test steps.
+4. Order your test steps in the test suite.
+5. Click “Start Test Suite”. Once all tests finish running, graphs for each test step are shown in the Analysis Tab.
+6. In the Report Tab, fill out each field (Custom Field allows you to populate a row in the report header with a custom title).
+7. Select the output format (JSON or PDF).
 
 ## File Structure
 
